@@ -1,7 +1,7 @@
 {
-  "name": "@navbar-app/navbar-project",
+  "name": "@react-app-2/react-project-2",
   "scripts": {
-    "start": "webpack serve --port 9001",
+    "start": "webpack serve --port 9003",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
@@ -60,5 +60,5 @@
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9"
   },
-  "types": "dist/navbar-app-navbar-project.d.ts"
+  "types": "dist/react-app-2-react-project-2.d.ts"
 }
