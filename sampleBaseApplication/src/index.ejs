@@ -41,6 +41,7 @@
         }
       }
     </script>
+
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
@@ -48,15 +49,6 @@
     />
 
     <!-- need to add React to an import map on the page -->
-
-    <script type="systemjs-importmap">
-      {
-        "imports": {
-          "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
-          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
-        }
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.min.js"></script>
@@ -70,7 +62,9 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+          "react": "https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js",
+          "react-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js",
           "@SampleOrg/root-config": "http://localhost:9000/SampleOrg-root-config.js",
           "@navbar-app/navbar-project": "http://localhost:9001/navbar-app-navbar-project.js",
           "@react-app-1/react-project-1": "http://localhost:9002/react-app-1-react-project-1.js",
@@ -94,24 +88,33 @@
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
     <% } %>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <script>
       System.import("@SampleOrg/root-config");
-      // System.import("@navbar-app/navbar-project");
-      // System.import("@react-app-1/react-project-1");
-      // System.import("@react-app-2/react-project-2");
     </script>
     <import-map-overrides-full
       show-when-local-storage="devtools"
       dev-libs
     ></import-map-overrides-full>
-
-    <div id="nav-container"></div>
-    <main>
-      <div id="page-1-container"></div>
-      <div id="page-2-container"></div>
-    </main>
   </body>
 </html>
