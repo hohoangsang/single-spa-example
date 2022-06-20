@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+.sidebar__container {
+    height: calc(100vh - 62px);
+    overflow: auto;
+    background-color: #404040;
+    color: white;
+}
+
+.sidebar__item {
+    padding: 20px 10px;
+    border-bottom: 1px solid ;
+    display: flex;
+    gap: 0 8px;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.sidebar__item svg {
+    margin-top: 3px;
+}
+
+.sidebar__item p {
+    margin: 0;
+}
+
+.sidebar__item:hover {
+    background-color: #909090;
+    border-right: 3px solid blue;
+}
+
+.sidebar__menu .active {
+    background-color: #909090;
+    border-right: 3px solid blue;
+}
