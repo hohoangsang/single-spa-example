@@ -10,6 +10,9 @@ export default function Navbar(props: any) {
         <a href="/page2" className="link">
           Page 2
         </a>
+        <a href="/page3" className="link">
+          Page migrated from CRA
+        </a>
       </nav>
     </header>
   );
