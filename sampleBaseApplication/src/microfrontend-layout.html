@@ -4,17 +4,11 @@
   </template>
 
   <main>
-    <nav>
-      <application name="@navbar-app/navbar-project"></application>
-    </nav>
-    <route path="page1/:id/index">
-      <application name="@react-app-1/react-project-1"></application>
-    </route>
-    <route path="page2">
-      <application name="@react-app-2/react-project-2"></application>
-    </route>
-    <route path="page3">
-      <application name="@org/cra-app"></application>
-    </route>
+    <application name="@org/auth-app"></application>
+    <application name="@org/layout"></application>
+    <application name="@navbar-app/navbar-project"></application>
+    <application name="@react-app-1/react-project-1"></application>
+    <application name="@react-app-2/react-project-2"></application>
+    <application name="@org/cra-app"></application>
   </main>
 </single-spa-router>
