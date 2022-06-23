@@ -11,14 +11,22 @@ export function showWhenAnyOf(routes) {
 }
 
 export function showWhenPrefix(routes) {
+  const token = localStorage.getItem("token");
   return function (location) {
-    return routes.some((route) => location.pathname.startsWith(route));
+    return token && routes.some((route) => location.pathname.startsWith(route));
   };
 }
 
 export function showExcept(routes) {
   return function (location) {
     return routes.every((route) => location.pathname !== route);
+  };
+}
+
+export function showAbsoluteWhenAuth(routes) {
+  const token = localStorage.getItem("token")
+  return function (location) {
+    return token && routes.every((route) => location.pathname !== route);
   };
 }
 

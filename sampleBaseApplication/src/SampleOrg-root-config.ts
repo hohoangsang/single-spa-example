@@ -4,7 +4,7 @@ import {
   constructRoutes,
   constructLayoutEngine,
 } from "single-spa-layout";
-import { showExcept, showWhenAnyOf, showWhenPrefix } from "./active-function";
+import { showAbsoluteWhenAuth, showExcept, showWhenAnyOf, showWhenPrefix } from "./active-function";
 import microfrontendLayout from "./microfrontend-layout.html";
 
 
@@ -20,7 +20,6 @@ const applications = constructApplications({
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.map((app: any) => {
-  console.log(app);
   switch (app.name) {
     case "@org/auth-app": {
       app.activeWhen = [showWhenAnyOf(['/login'])]
@@ -33,7 +32,7 @@ applications.map((app: any) => {
     }
 
     case "@navbar-app/navbar-project": {
-      app.activeWhen = [showWhenAnyOf(['/'])]
+      app.activeWhen = [showAbsoluteWhenAuth(['/'])]
       break;
     }
 
