@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist"
   },
-  "files": ["src/navbar-app-navbar-project.tsx"],
+  "files": ["src/org-homepage.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }

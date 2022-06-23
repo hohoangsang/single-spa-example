@@ -1,13 +1,18 @@
-import React from "react";
+import React, { Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 
 export default function Main() {
   const navigate = useNavigate();
-
   const token = localStorage.getItem("token");
 
-  if (!token) navigate("/login", { replace: true });
+  useEffect(() => {
+    if (!token) navigate("/login", { replace: true });
+  }, [token, navigate]);
 
-  return <div>{token && <Navbar />}</div>;
+  return (
+    <Fragment>
+      <Navbar />
+    </Fragment>
+  );
 }

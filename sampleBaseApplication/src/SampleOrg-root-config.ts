@@ -31,7 +31,7 @@ applications.map((app: any) => {
       break;
     }
 
-    case "@navbar-app/navbar-project": {
+    case "@org/homepage": {
       app.activeWhen = [showAbsoluteWhenAuth(['/'])]
       break;
     }

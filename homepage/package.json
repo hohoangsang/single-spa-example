@@ -1,5 +1,5 @@
 {
-  "name": "@navbar-app/navbar-project",
+  "name": "@org/homepage",
   "scripts": {
     "start": "webpack serve --port 9001",
     "start:standalone": "webpack serve --env standalone",

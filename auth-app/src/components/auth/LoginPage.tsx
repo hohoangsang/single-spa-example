@@ -25,7 +25,7 @@ export default function LoginPage() {
 
   const openErrorNotification = () => {
     const args = {
-      message: "Faild to Sign In!",
+      message: "Failed to Sign In!",
       description: "Username or password is incorrect. Please try again",
     };
 
