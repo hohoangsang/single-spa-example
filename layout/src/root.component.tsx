@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Navigate } from "react-router-dom";
 import Main from "./Main";
 
 export default function Root(props) {

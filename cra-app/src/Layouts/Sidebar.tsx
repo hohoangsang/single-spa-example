@@ -43,6 +43,7 @@ function Sidebar() {
         {menuSidebar.length
           ? menuSidebar.map((item: any, index: number) => (
               <li
+                key={index}
                 className={`sidebar__item ${
                   index === selectItem ? "active" : null
                 }`}

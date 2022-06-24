@@ -23,13 +23,6 @@ export function showExcept(routes) {
   };
 }
 
-export function showAbsoluteWhenAuth(routes) {
-  const token = localStorage.getItem("token")
-  return function (location) {
-    return routes.some((route) => location.pathname === route);
-  };
-}
-
 export function nav() {
   // The nav is always active
   return true;

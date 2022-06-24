@@ -4,7 +4,7 @@ import {
   constructRoutes,
   constructLayoutEngine,
 } from "single-spa-layout";
-import { showAbsoluteWhenAuth, showExcept, showWhenAnyOf, showWhenPrefix } from "./active-function";
+import { showExcept, showWhenAnyOf, showWhenPrefix } from "./active-function";
 import microfrontendLayout from "./microfrontend-layout.html";
 
 
@@ -32,7 +32,7 @@ applications.map((app: any) => {
     }
 
     case "@org/homepage": {
-      app.activeWhen = [showAbsoluteWhenAuth(['/'])]
+      app.activeWhen = [showWhenAnyOf(['/'])]
       break;
     }
 
